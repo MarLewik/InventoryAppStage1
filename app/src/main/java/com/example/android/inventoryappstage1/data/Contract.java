@@ -8,7 +8,7 @@ import android.provider.BaseColumns;
 
 public final class Contract {
     private Contract(){}
-    public static abstract class ItemEntry implements BaseColumns{
+    public static abstract class ProductEntry implements BaseColumns{
         public static final String TABLE_NAME = "products";
         public static final String _ID = BaseColumns._ID;
         public static final String COLUMN_PRODUCT_NAME = "name";

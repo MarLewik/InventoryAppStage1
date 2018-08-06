@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.android.inventoryappstage1.data.Contract.ItemEntry;
+import com.example.android.inventoryappstage1.data.Contract.ProductEntry;
 
 /**
  * Created by marcin on 08/04/2018.
@@ -21,13 +21,13 @@ public class DbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String SQL_CREATE_ITEMS_TABLE =  "CREATE TABLE " + ItemEntry.TABLE_NAME + " ("
-                + ItemEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + ItemEntry.COLUMN_PRODUCT_NAME + " TEXT NOT NULL, "
-                + ItemEntry.COLUMN_PRICE + " INTEGER NOT NULL, "
-                + ItemEntry.COLUMN_QUANTITY + " INTEGER NOT NULL DEFAULT 0, "
-                + ItemEntry.COLUMN_SUPPLIER_NAME + " TEXT NOT NULL, "
-                + ItemEntry.COLUMN_SUPPLIER_PHONE_NUMBER + " INTEGER NOT NULL);";
+        String SQL_CREATE_ITEMS_TABLE =  "CREATE TABLE " + ProductEntry.TABLE_NAME + " ("
+                + ProductEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + ProductEntry.COLUMN_PRODUCT_NAME + " TEXT NOT NULL, "
+                + ProductEntry.COLUMN_PRICE + " INTEGER NOT NULL, "
+                + ProductEntry.COLUMN_QUANTITY + " INTEGER NOT NULL DEFAULT 0, "
+                + ProductEntry.COLUMN_SUPPLIER_NAME + " TEXT NOT NULL, "
+                + ProductEntry.COLUMN_SUPPLIER_PHONE_NUMBER + " INTEGER NOT NULL);";
         db.execSQL(SQL_CREATE_ITEMS_TABLE);
     }
 

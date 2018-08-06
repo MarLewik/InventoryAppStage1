@@ -9,7 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
-import com.example.android.inventoryappstage1.data.Contract.ItemEntry;
+import com.example.android.inventoryappstage1.data.Contract.ProductEntry;
 import com.example.android.inventoryappstage1.data.DbHelper;
 
 public class EditorActivity extends AppCompatActivity {
@@ -46,12 +46,12 @@ public class EditorActivity extends AppCompatActivity {
         DbHelper mDbHelper = new DbHelper(this);
         SQLiteDatabase db = mDbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(ItemEntry.COLUMN_PRODUCT_NAME, nameString);
-        values.put(ItemEntry.COLUMN_PRICE, price);
-        values.put(ItemEntry.COLUMN_QUANTITY, quantity);
-        values.put(ItemEntry.COLUMN_SUPPLIER_NAME, supplierNameString);
-        values.put(ItemEntry.COLUMN_SUPPLIER_PHONE_NUMBER, supplierNumber);
-        long newRowId = db.insert(ItemEntry.TABLE_NAME, null, values);
+        values.put(ProductEntry.COLUMN_PRODUCT_NAME, nameString);
+        values.put(ProductEntry.COLUMN_PRICE, price);
+        values.put(ProductEntry.COLUMN_QUANTITY, quantity);
+        values.put(ProductEntry.COLUMN_SUPPLIER_NAME, supplierNameString);
+        values.put(ProductEntry.COLUMN_SUPPLIER_PHONE_NUMBER, supplierNumber);
+        long newRowId = db.insert(ProductEntry.TABLE_NAME, null, values);
         if (newRowId == -1) {
             Toast.makeText(this, "Product saving error", Toast.LENGTH_SHORT).show();
         } else {

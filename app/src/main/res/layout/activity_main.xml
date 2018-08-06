@@ -11,6 +11,12 @@
         android:layout_height="match_parent"
         android:padding="@dimen/margin"/>
 
+    <TextView
+        android:id="@+id/text_view_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin"/>
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floating_action_button"
         android:layout_width="wrap_content"
